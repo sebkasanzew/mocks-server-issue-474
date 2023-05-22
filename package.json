@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cross-env NODE_ENV=test cypress open",
+    "cy:run": "cypress run",
+    "mocks": "mocks-server"
   },
   "keywords": [
     "@mocks-server/main",
@@ -12,8 +14,13 @@
   "author": "Sebastian Kasanzew",
   "license": "MIT",
   "devDependencies": {
+    "@mocks-server/cypress-commands": "6.1.1",
     "@mocks-server/main": "4.0.1",
+    "cross-env": "7.0.3",
     "cypress": "12.12.0",
     "typescript": "5.0.4"
+  },
+  "resolutions": {
+    "node-fetch": "3"
   }
 }
